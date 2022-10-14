@@ -1,0 +1,410 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-header{
+    width: 100%;
+    height: 110vh;
+    z-index: 900;
+
+    background-color: black;
+}
+/* Modal */
+
+.modal{
+    font-size: 0.9rem;
+    color: black;
+}
+
+.close{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.modal-title{
+    margin: 0 auto !important;
+}
+
+.modal-content{
+    border-radius: 5%;
+}
+
+/* ========================================================== */
+
+.phone-menu{
+    display: none;
+}
+
+.header-menu{
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 10000;
+}
+
+.logo-nav{
+    background-color: black;
+
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+.logo-nav a img{
+    width: 40px;
+}
+.logo-nav nav ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+.logo-nav nav ul li{
+    list-style-type: none;
+    padding: 0 0 0 20px;
+}
+.logo-nav nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.logo-nav nav ul li a::after,
+.logo-nav nav ul li .sticky::after{
+    content: '';
+    display: block;
+    position: relative;
+    top: 5px;
+    background-color: white;
+    width: 0;
+    height: 2px;
+    margin: auto;
+    transition: 0.3s;
+}
+.logo-nav nav ul li a:hover{
+    filter: drop-shadow(1px 1px 3px white);
+}
+
+.logo-nav nav ul li a:hover::after,
+.logo-nav nav ul li .sticky:hover::after{
+    width: 15px;
+}
+
+.logo-nav nav ul li .sticky::after{
+    background-color: black;
+}
+.logo-nav nav ul li .sticky:hover{
+    filter: drop-shadow(1px 1px 3px black);
+}
+
+.nav-menu-icon{
+    display: none;
+}
+/* ========================================================== */
+
+.site-header .header-img{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url('image/index-page/backgrounds/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+
+    width: 90vw;
+    height: 80vh;
+    transition: 1s ease;
+}
+.site-header .header-img .img-text{
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 3px 3px 2px black;
+    filter: drop-shadow(0 0 2px black);
+    padding: 0 20px;
+}
+.site-header .header-img #text1{
+    color: white;
+    font-size: 100px;
+    line-height: 80%;
+}
+.site-header .header-img #text2{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    padding: 0 30px;
+}
+
+/* ========================================================== */
+
+.header-menu .logo-nav .dropdown .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: white;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid rgb(160, 160, 160);
+    box-shadow: 1px 1px 5px black;
+}
+.header-menu .logo-nav .dropdown .profile #dropdown-caret{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+}
+.header-menu .logo-nav .dropdown .profile #profile-img{
+    width: 30px;
+    margin: 0 5px;
+}
+
+.location{
+    padding-top: 2em;
+}
+
+.loc-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5%;
+    
+    justify-content: center;
+    color: black;
+}
+
+.loc-section__title{
+    color: black;
+    width: 100%;
+    margin: 0;
+    padding: 40px 0 25px 0;
+    text-align: center;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+}
+
+.loc-section__card{
+    
+    position: relative;
+    margin: 20px;
+    width: 225px;
+    background-color: rgb(255, 55, 55);
+    border-radius: 15px;
+    height: 55vh;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.loc-section__card1:hover,
+.loc-section__card2:hover,
+.loc-section__card3:hover,
+.loc-section__card4:hover{
+    transform: scale(110%);
+    filter: drop-shadow(0 0 5px black);
+}
+
+.loc-section__card > img{
+    max-width: 100%;
+    min-height: 70%;
+}
+
+.loc-section__card__curve{
+    position: absolute;
+    background-color: rgb(255, 55, 55);
+    border-top-left-radius: 100px 20px;
+    width: 120%;
+    height: 20%;
+    bottom: 20%;
+    transform: rotate(-7deg);
+    box-shadow: -1px -1px 10px black;
+}
+
+.curve-block{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(255, 55, 55);
+}
+
+.curve-outer-layer{
+    background-color: rgb(220, 55, 55);
+    bottom: 22%;
+    transform: rotate(-9deg);
+}
+
+.dropdown-menu.dropdown-menu-sw.show{
+    transform: translateY(42px) !important;
+    right: 0;
+    left: auto !important;
+}
+
+.dropdown-item{
+    padding: 0 1rem; 
+    font-family: 'Segoe UI', sans-serif;
+    font-size: .9em;
+}
+
+.card{
+    font-size: 14px;
+    width: 250px;
+    border: none;
+    margin: 2rem 0.7rem 0 0.7rem;
+    padding: 0;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card-body{
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    cursor: pointer;
+}
+
+.carousel-item{
+    height: 250px;
+}
+
+.rounded-img{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+@media(max-width: 40em){
+    .logo-nav > nav{
+        display: none;
+    }
+
+    .header-menu{
+        position: fixed;
+        top: -90vh;
+        transition: 0.5s;
+    }
+
+    .phone-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+        background-color: white;
+    }
+
+    .phone-menu > nav > ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .phone-menu > nav > ul > li{
+        text-align: center;
+        padding: 10% 0;
+        
+    }
+
+    .btn-phone{
+        text-decoration: none;
+        color: black;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Acto, sans-serif;
+    }
+
+
+
+    .nav-menu-icon{
+        display: flex;
+        
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+        left: 4.7%;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .icon-bar{
+        background-color: white;
+        border-radius: 20px;
+
+        width: 100%;
+        height: 15%;
+    }
+
+    .site-header{
+        padding-top: 10vh;
+    }
+
+    .site-header .header-img{
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .site-header .header-img .img-text{
+        text-align: center;
+    }
+    .site-header .header-img #text1{
+        font-size: 90px;
+    }
+    .site-header .header-img #text2{
+        font-size: 25px;
+    }
+
+    .loc-section__title{
+        padding: 30px 0 10 0;
+    
+        justify-self: center;
+        text-align: center;
+        
+        font-size: 26px;
+    }
+
+    .loc-section{
+        grid-gap: 2%;
+    }
+
+    .dropdown-menu.dropdown-menu-sw.phone-menu-active.show{
+        transform: translateY(-102px) !important;
+    }
+}
+
+/* book.php style */
+
+.book-box{
+    width: 40%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    box-shadow: rgb(134, 134, 134) 0 6px 16px;
+}
+
+.book-carousel-item{
+    height: 400px !important;
+}
