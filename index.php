@@ -184,7 +184,7 @@
                 <ul>
                     <li><a href="./#" class="btn-phone">HOME</a></li>
                     <li><a href="./#book-anchor" class="btn-phone">BOOK</a></li>
-                    <li><a href="./#header-id" class="btn-phone">CONTACT US</a></li>
+                    <li><a href="./#contact" class="btn-phone">CONTACT US</a></li>
                 </ul>
             </nav>
         </div>
@@ -194,7 +194,7 @@
                 <ul>
                     <li><a href="./#" class="btn btn-desktop">Home</a></li>
                     <li><a href="./#book-anchor" class="btn btn-desktop">Book</a></li>
-                    <li><a href="./#header-id" class="btn btn-desktop">Contact us</a></li>
+                    <li><a href="./#contact" class="btn btn-desktop">Contact us</a></li>
                 </ul>
             </nav>
             <div class="nav-menu-icon">
