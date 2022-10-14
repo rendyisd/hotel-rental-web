@@ -36,15 +36,13 @@
 </div>
 <hr id="book-anchor" color="black">
 
-<div class="container-fluid pt-2">
+<div class="container-fluid pt-2 mb-4">
     <h2 class="loc-section__title">Settlements for your trip</h2>
     <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" method="post">
         <i class="bi bi-search" aria-hidden="true"></i>
         <input class="form-control form-control-sm ml-3" name="search" style="border: none; border: solid 1px #000; border-radius: 15px; width: 250px;" type="text" placeholder="Search" aria-label="Search">
     </form>
     
-    
-
     <div class="container mt-3 d-flex flex-wrap justify-content-center">
         
         <?php
@@ -145,5 +143,29 @@
                 
             </form>
         <?php }?>
+    </div>
+</div>
+<div class="footer" id="contact">
+    <div class="container text-center">
+        <h1>Contact Us</h1>
+        <p class="lead" style="font-size:12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, reprehenderit similique reiciendis sunt ex doloribus commodi laudantium eius cum veniam harum consequuntur incidunt culpa nostrum architecto aspernatur quod ut iste.</p>
+        <div class="d-flex flex-row justify-content-around contact-img" style="margin-top: 4rem;">
+            <div>
+                <i class="bi bi-geo-alt" style="font-size: 2rem;"></i>
+                <h6 class="contact-img-title">ADDRESS</h6>
+                <h6 class="contact-img-desc">10 14 Srijaya Negara</h6>
+                <h6 class="contact-img-desc">Palembang Indonesia</h6>
+            </div>
+            <div>
+                <i class="bi bi-telephone-inbound" style="font-size: 2rem;"></i>
+                <h6 class="contact-img-title">TELEPHONE</h6>
+                <h6 class="contact-img-desc">(0822)12345678</h6>
+            </div>
+            <div>
+                <i class="bi bi-envelope" style="font-size: 2rem;"></i>
+                <h6 class="contact-img-title">EMAIL</h6>
+                <h6 class="contact-img-desc">testmail@test.com</h6>
+            </div>
+        </div>
     </div>
 </div>
