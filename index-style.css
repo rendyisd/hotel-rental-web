@@ -443,10 +443,14 @@ body{
 
 .profile-box-1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 35%;
+    width: 30%;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     box-shadow: rgb(68, 68, 68) 0 2px 5px;
+}
+
+.profile-box-2{
+    padding-left: 35%;
 }
 
 .profile-box-text{
