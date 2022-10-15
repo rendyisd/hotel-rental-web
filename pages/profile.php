@@ -1,5 +1,5 @@
 <div class="container my-4">
-    <div class="p-4 profile-box-1" style="letter-spacing: -1px;">
+    <div class="p-4 position-fixed profile-box-1" style="letter-spacing: -1px;">
         <img src="image/index-page/profile.png" class="w-50 d-block mb-4" style="margin: 0 auto;">
         <hr class="bg-dark">
         <h4 class="m-0"><?php echo $_SESSION['username'] ?></h4>
@@ -29,6 +29,70 @@
             </span>
         </div>
         <hr class="bg-dark">
-        <button type="button" class="btn btn-primary d-block" style="margin: 0 auto;">Edit Profile</button>
+        <button type="button" class="btn btn-primary d-block" data-toggle="modal" data-target="#editProfile" style="margin: 0 auto;">Edit Profile</button>
+        
+    </div>
+    <div class="container ml-4 profile-box-2">
+        <h2 style="letter-spacing: -2px;">History</h2>
+        <hr class="bg-dark">
+        <div>
+            <?php 
+                $history_query = "SELECT * FROM book_history WHERE id = ".$_SESSION['id_user'];
+                
+
+                $q1 = mysqli_query($db, $history_query);
+
+                if(mysqli_num_rows($q1) == 0){
+                    echo "<h3 class='text-center' style='margin-top: 12rem'>Ain't Nobody Here but Us Chickens.</h3>";
+                }
+
+                $it = 1;
+                while($q1_ret = mysqli_fetch_array($q1)){
+                    $history_hotel_query = "SELECT HotelName FROM hotels WHERE HotelID = ".$q1_ret['HotelID'];
+                    $q2 = mysqli_query($db, $history_hotel_query);
+                    $q2_ret = mysqli_fetch_array($q2);
+            ?>
+                <div class="container p-4 mt-4 mb-2 bg-info text-white" style="border-radius: 15px;">
+                    <form method="post" action="process/history-delete-process.php"
+                    <?php echo "id='history-submit-".$it."'"; ?>>
+                        <span class="d-flex justify-content-between">
+                            <h3><?php echo $q2_ret['HotelName']; ?></h3>
+                            <button type="button" class="close" style="color: white;"
+                            <?php echo 'onclick="$('."'#history-submit-".$it."'".').submit();"' ?>>
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </span>
+                        <span style="font-size: 12px;">
+                            <?php echo $_SESSION['username']; ?> checked in from 
+                            <b><?php echo $q1_ret['CheckInDate']; ?></b> to 
+                            <b><?php echo $q1_ret['CheckOutDate']; ?></b> for 
+                            <b><?php echo $q1_ret['GuestCount']; ?> guest(s)</b> and charged for
+                            <b><?php echo $q1_ret['TotalPrice']; ?></b>
+                        <span>
+
+                        <input type="hidden" name="history-id" <?php echo "value=".$q1_ret['BookID'] ?> >
+                    </form>
+                </div>
+            <?php $it++;} ?>
+        </div>
+    </div>
+</div>
+<!-- Edit profile modal  -->
+<div class="modal fade" id="editProfile" role="dialog" style="margin-top: 3rem;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Profile</h5>
+            </div>
+            <div class="modal-body">
+                <!-- TODO: Edit Profile form -->
+                <!-- TODO: Make user identity table -->
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save</button> <!-- TODO: save profile -->
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
+            </div>
+        </div>
     </div>
 </div>

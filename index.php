@@ -215,7 +215,7 @@
                             <a class="dropdown-item" href=#profile>Hello, <b>'.$_SESSION["username"].'</b></a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.php?p=profile">Your Profile</a>
-                            <a class="dropdown-item" href="index.php?p=history">Booking History</a>
+                            <a class="dropdown-item" href="index.php?p=profile">Booking History</a>
                             ';
                         }
                         else if(!isset($_SESSION['loggedin'])){
