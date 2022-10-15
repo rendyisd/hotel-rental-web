@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placeholder - Homestays|Hotels Rental</title>
+    <title>Placeholder - Homestays | Hotels Rental</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -214,7 +214,7 @@
                             echo '
                             <a class="dropdown-item" href=#profile>Hello, <b>'.$_SESSION["username"].'</b></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#profile">Your Profile</a>
+                            <a class="dropdown-item" href="index.php?p=profile">Your Profile</a>
                             <a class="dropdown-item" href="index.php?p=history">Booking History</a>
                             ';
                         }
