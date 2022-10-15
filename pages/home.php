@@ -37,7 +37,7 @@
 <hr id="book-anchor" color="black">
 
 <div class="container-fluid pt-2 mb-4">
-    <h2 class="loc-section__title">Settlements for your trip</h2>
+    <h2 class="loc-section__title">Settlement for your trip</h2>
     <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" method="post">
         <i class="bi bi-search" aria-hidden="true"></i>
         <input class="form-control form-control-sm ml-3" name="search" style="border: none; border: solid 1px #000; border-radius: 15px; width: 250px;" type="text" placeholder="Search" aria-label="Search">
@@ -154,7 +154,7 @@
                 <i class="bi bi-geo-alt" style="font-size: 2rem;"></i>
                 <h6 class="contact-img-title">ADDRESS</h6>
                 <h6 class="contact-img-desc">10 14 Srijaya Negara</h6>
-                <h6 class="contact-img-desc">Palembang Indonesia</h6>
+                <h6 class="contact-img-desc">Palembang, Indonesia</h6>
             </div>
             <div>
                 <i class="bi bi-telephone-inbound" style="font-size: 2rem;"></i>

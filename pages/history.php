@@ -7,7 +7,6 @@
 
         if(mysqli_num_rows($q1) == 0){
             echo "<h3 class='text-center mt-5'>Ain't Nobody Here but Us Chickens.</h3>";
-            die();
         }
 
         $it = 1;

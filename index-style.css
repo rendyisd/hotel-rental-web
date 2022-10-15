@@ -396,21 +396,6 @@ body{
     }
 }
 
-/* book.php style */
-
-.book-box{
-    width: 40%;
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: 12px;
-    box-shadow: rgb(134, 134, 134) 0 6px 16px;
-}
-
-.book-carousel-item{
-    height: 400px !important;
-}
-
-/* ---------------------------------------------- */
-
 .footer{
     padding: 3% 0;
     color: white;
@@ -438,3 +423,34 @@ body{
     font-size: 12px;
     margin: 0;
 }
+
+/* book.php style */
+
+.book-box{
+    width: 40%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    box-shadow: rgb(134, 134, 134) 0 6px 16px;
+}
+
+.book-carousel-item{
+    height: 400px !important;
+}
+
+/* ---------------------------------------------- */
+
+/* profile.php style */
+
+.profile-box-1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 35%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    box-shadow: rgb(68, 68, 68) 0 2px 5px;
+}
+
+.profile-box-text{
+    font-size: 12px;
+}
+
+/* ---------------------------------------------- */
