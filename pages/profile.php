@@ -79,20 +79,113 @@
 </div>
 <!-- Edit profile modal  -->
 <div class="modal fade" id="editProfile" role="dialog" style="margin-top: 3rem;">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit Profile</h5>
             </div>
-            <div class="modal-body">
-                <!-- TODO: Edit Profile form -->
-                <!-- TODO: Make user identity table -->
-                <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save</button> <!-- TODO: save profile -->
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
-            </div>
+            <form action=""> <!-- TODO: Edit placeholder to show user's current account identity -->
+                <div class="modal-body" style="font-size: 0.8rem;">
+                    <h6>Personal Identity</h6>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-fname">First name</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-fname" name="edit-profile-fname" placeholder="" >
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-surname">Surname</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-surname" name="edit-profile-surname" placeholder="" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-id-number">ID / Passport number</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-id-number" name="edit-profile-id-number" placeholder="" >
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-country">Country</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-country" name="edit-profile-country" placeholder="" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-city">City</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-city" name="edit-profile-city" placeholder="" >
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-address">Address</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-address" name="edit-profile-address" placeholder="" >
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <h6>Contact Information</h6>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-email">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="edit-profile-email" name="edit-profile-email" placeholder=<?php echo "'".$_SESSION['email']."'" ?>>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-phone">Phone number</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-phone" name="edit-profile-phone" placeholder="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h6>Payment Methods</h6>
+                    <div class="container d-flex justify-content-around bg-light w-75 py-3 mb-4" style="border-radius: 1rem;">
+                        <span class="text-center" style="cursor: pointer;" onclick="">
+                            <i class="bi bi-paypal" style="font-size: 2rem;"></i>
+                            <p class="m-0">Paypal</p>
+                        </span>
+                        <span class="text-center" style="cursor: pointer;" onclick="">
+                            <i class="bi bi-credit-card" style="font-size: 2rem;"></i>
+                            <p class="m-0">Method2</p>
+                        </span>
+                        <span class="text-center" style="cursor: pointer;" onclick="">
+                            <i class="bi bi-credit-card-2-front" style="font-size: 2rem;"></i>
+                            <p class="m-0">Method3</p>
+                        </span>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <label for="edit-profile-card-number">Card number</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-card-number" name="edit-profile-card-number" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="edit-profile-cvv">CVV</label>
+                                    <input type="text" class="form-control form-control-sm" id="edit-profile-cvv" name="edit-profile-cvv" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button> <!-- TODO: save profile -->
+                    <button type="reset" class="btn btn-danger" onclick="$('#editProfile').modal('toggle')">Discard</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
